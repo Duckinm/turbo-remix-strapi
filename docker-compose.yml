@@ -6,7 +6,16 @@ services:
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: strapi
       POSTGRES_DB: strapi
+
+    volumes:
+      - ./volumes/postgres:/var/lib/postgresql/data
     ports:
       - '5132:5432'
-
     restart: unless-stopped
+
+  redis:
+    image: bitnami/redis:6.2
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6379:6379'

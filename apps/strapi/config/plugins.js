@@ -10,6 +10,9 @@ module.exports = ({ env }) => ({
       excludedTypes: [],
     },
   },
+  navigation: {
+    enabled: true,
+  },
   "rest-cache": {
     config: {
       provider: {
@@ -20,15 +23,14 @@ module.exports = ({ env }) => ({
         },
       },
       strategy: {
-        debug: true,
-        enableXCacheHeaders: true,
-        enableEtag: true,
         contentTypes: [
           // list of Content-Types UID to cache
-          //  "api::category.category",
-          //  "api::article.article",
-          // "api::global.global",
-          // "api::homepage.homepage",
+          "api::global.global",
+          "api::page.page",
+          "api::dynamic-richtext.dynamic-richtext",
+          "plugin::navigation.navigation",
+          "plugin::navigation.navigation-item",
+          "plugin::navigation.navigations-items-related",
         ],
       },
     },
