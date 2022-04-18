@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_menu_sections",
   "info": {
-    "name": "MenuSection",
+    "displayName": "MenuSection",
     "icon": "external-link-square-alt",
     "description": ""
   },

@@ -1,8 +1,8 @@
 {
   "collectionName": "components_elements_seminar_cards",
   "info": {
-    "name": "seminar-card",
-    "icon": "sim-card",
+    "displayName": "Seminar-Card",
+    "icon": "allergies",
     "description": ""
   },
   "options": {},
@@ -15,31 +15,16 @@
       "type": "richtext",
       "required": true
     },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
       "required": true,
-      "pluginOptions": {}
-    },
-    "url": {
-      "type": "string",
-      "required": true
-    },
-    "newTab": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "text": {
-      "type": "string"
-    },
-    "tilte": {
-      "type": "string",
-      "required": true
+      "allowedTypes": ["images"]
     }
   }
 }

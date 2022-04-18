@@ -1,30 +1,27 @@
 {
-  "collectionName": "components_slices_testimonials",
+  "collectionName": "components_elements_testimonials",
   "info": {
-    "name": "Testimonial",
+    "displayName": "Testimonial",
     "icon": "user-check",
     "description": ""
   },
   "options": {},
   "attributes": {
     "logo": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": ["images"],
-      "plugin": "upload",
+      "type": "media",
+      "multiple": false,
       "required": true,
-      "pluginOptions": {}
+      "allowedTypes": ["images"]
     },
     "picture": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": ["images"],
-      "plugin": "upload",
+      "type": "media",
+      "multiple": false,
       "required": true,
-      "pluginOptions": {}
+      "allowedTypes": ["images"]
     },
     "text": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "authorName": {
       "type": "string",
@@ -37,7 +34,8 @@
     "link": {
       "type": "component",
       "repeatable": false,
-      "component": "links.link"
+      "component": "links.link",
+      "required": false
     }
   }
 }

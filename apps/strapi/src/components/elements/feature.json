@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_features",
   "info": {
-    "name": "feature",
+    "displayName": "feature",
     "icon": "traffic-light"
   },
   "options": {},

@@ -1,7 +1,7 @@
 {
   "collectionName": "components_links_footer_sections",
   "info": {
-    "name": "FooterSection",
+    "displayName": "FooterSection",
     "icon": "chevron-circle-down"
   },
   "options": {},

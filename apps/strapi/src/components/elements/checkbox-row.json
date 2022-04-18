@@ -1,8 +1,9 @@
 {
   "collectionName": "components_elements_checkbox_rows",
   "info": {
-    "name": "CheckboxRow",
-    "icon": "calendar-check"
+    "displayName": "CheckboxRow",
+    "icon": "allergies",
+    "description": ""
   },
   "options": {},
   "attributes": {

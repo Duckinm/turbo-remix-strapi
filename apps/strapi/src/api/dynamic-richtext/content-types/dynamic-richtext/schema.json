@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dynamic_richtexts",
+  "info": {
+    "singularName": "dynamic-richtext",
+    "pluralName": "dynamic-richtexts",
+    "displayName": "Dynamic Richtext",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "shortName": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "shortName"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_logos",
   "info": {
-    "name": "logos",
+    "displayName": "logos",
     "icon": "apple-alt"
   },
   "options": {},
@@ -10,11 +10,10 @@
       "type": "string"
     },
     "logo": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": ["images"],
-      "plugin": "upload",
-      "required": true
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
     }
   }
 }

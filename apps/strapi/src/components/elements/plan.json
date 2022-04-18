@@ -1,7 +1,7 @@
 {
   "collectionName": "components_elements_plans",
   "info": {
-    "name": "plan",
+    "displayName": "plan",
     "icon": "search-dollar"
   },
   "options": {},

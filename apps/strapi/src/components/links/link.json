@@ -1,9 +1,8 @@
 {
   "collectionName": "components_links_links",
   "info": {
-    "name": "Link",
-    "icon": "link",
-    "description": ""
+    "displayName": "link",
+    "icon": "divide"
   },
   "options": {},
   "attributes": {
