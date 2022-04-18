@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_checkbox_rows",
+  "info": {
+    "name": "CheckboxRow",
+    "icon": "calendar-check"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true,
+      "default": "lowercase_and_unterstriche"
+    },
+    "label": {
+      "type": "string",
+      "required": true,
+      "default": "Seminare 123"
+    }
+  }
+}

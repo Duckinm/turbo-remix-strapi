@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_sections_lead_forms",
+  "info": {
+    "name": "Lead form",
+    "icon": "at",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "emailPlaceholder": {
+      "type": "string",
+      "default": "max@mustermann.de",
+      "required": true
+    },
+    "submitButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.button",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "default": "z.B. \"Kontakt\" \"Wer wir sind\""
+    },
+    "namePlaceholder": {
+      "type": "string",
+      "default": "Max Mustermann",
+      "required": true
+    },
+    "telPlaceholder": {
+      "type": "string",
+      "default": "0049 178 123 456",
+      "required": true
+    },
+    "subjectPlaceholder": {
+      "type": "string",
+      "default": "Betreff",
+      "required": true
+    },
+    "textPlaceholder": {
+      "type": "string",
+      "default": "Nachricht",
+      "required": true
+    },
+    "CheckboxRow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.checkbox-row"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_elements_seminar_cards",
+  "info": {
+    "name": "seminar-card",
+    "icon": "sim-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "text": {
+      "type": "string"
+    },
+    "tilte": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

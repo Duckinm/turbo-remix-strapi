@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_elements_headings",
+  "info": {
+    "name": "Heading",
+    "icon": "grin-hearts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "title_color": {
+      "type": "enumeration",
+      "enum": [
+        "black",
+        "orange",
+        "green",
+        "yellow",
+        "blue",
+        "red"
+      ],
+      "default": "black",
+      "required": true
+    },
+    "title_type": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h1",
+      "required": true
+    }
+  }
+}

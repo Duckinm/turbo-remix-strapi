@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_gradient_heroes",
+  "info": {
+    "name": "GradientHero",
+    "icon": "adjust",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "seminarcard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.seminar-card"
+    }
+  }
+}

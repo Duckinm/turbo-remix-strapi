@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_elements_menu_sections",
+  "info": {
+    "name": "MenuSection",
+    "icon": "external-link-square-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "newTab": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "links.link"
+    }
+  }
+}
