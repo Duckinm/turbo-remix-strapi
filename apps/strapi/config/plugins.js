@@ -13,16 +13,35 @@ module.exports = ({ env }) => ({
   navigation: {
     enabled: true,
   },
+  redis: {
+    config: {
+      connections: {
+        default: {
+          connection: {
+            host: "127.0.0.1",
+            port: 6379,
+            db: 0,
+          },
+          settings: {
+            debug: false,
+          },
+        },
+      },
+    },
+  },
   "rest-cache": {
     config: {
       provider: {
-        name: "memory",
+        name: "redis",
         options: {
           max: 32767,
-          maxAge: 3600,
+          connection: "default",
         },
       },
       strategy: {
+        debug: true,
+        enableEtag: true,
+        enableXCacheHeaders: true,
         contentTypes: [
           // list of Content-Types UID to cache
           "api::global.global",
