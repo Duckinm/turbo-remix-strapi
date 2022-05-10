@@ -3,11 +3,14 @@ import {
   Links,
   LiveReload,
   Meta,
-  Outlet,
+  NavLink,
   Scripts,
   ScrollRestoration,
+  useLocation,
+  useOutlet,
   useTransition,
 } from "@remix-run/react";
+import { AnimatePresence, motion } from "framer-motion";
 import NProgress from "nprogress";
 import nProgressStyles from "nprogress/nprogress.css";
 import { useEffect } from "react";
@@ -24,6 +27,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export default function App() {
+  const outlet = useOutlet();
   const transition = useTransition();
   useEffect(() => {
     // when the state is idle then we can to complete the progress bar
@@ -40,7 +44,23 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+            <header>
+          <nav>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/slow-page">Slow Page</NavLink>
+            <NavLink to="/blogs">Error</NavLink>
+          </nav>
+        </header>
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.main
+            key={useLocation().key}
+            initial={{ x: "10%", opacity: 0 }}
+            animate={{ x: "0", opacity: 1 }}
+            exit={{ x: "-40%", opacity: 0 }}
+          >
+            {outlet}
+          </motion.main>
+        </AnimatePresence>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
