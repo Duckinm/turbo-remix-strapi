@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_simple_buttons",
+  "info": {
+    "displayName": "SimpleButton",
+    "icon": "clipboard"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary"
+      ],
+      "default": "primary",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "default": "Click me",
+      "required": true
+    }
+  }
+}

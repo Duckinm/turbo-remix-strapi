@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_sections_pricings",
+  "info": {
+    "displayName": "Pricing",
+    "icon": "dollar-sign"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Pricing"
+    },
+    "plans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.plan"
+    }
+  }
+}

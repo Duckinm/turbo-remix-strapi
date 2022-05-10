@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_level_models",
+  "info": {
+    "displayName": "LevelModel",
+    "icon": "th-list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "levels": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.level-row"
+    }
+  }
+}

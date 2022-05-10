@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_lead_forms",
+  "info": {
+    "displayName": "LeadForm",
+    "icon": "at",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "location": {
+      "type": "string",
+      "required": true,
+      "default": "/contact"
+    },
+    "checkboxes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.checkbox-row"
+    },
+    "submitButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.simple-button",
+      "required": true
+    }
+  }
+}
