@@ -30,7 +30,20 @@
     "Components": {
       "type": "dynamiczone",
       "components": [
-        "links.link"
+        "sections.button-actions",
+        "sections.dangerous-html",
+        "sections.dynamic-content",
+        "sections.feature-columns-group",
+        "sections.heading",
+        "sections.hero",
+        "sections.image",
+        "sections.large-video",
+        "sections.lead-form",
+        "sections.level-model",
+        "sections.pricing",
+        "sections.rich-text",
+        "sections.seminar-group",
+        "sections.testimonials-group"
       ],
       "required": true
     }
