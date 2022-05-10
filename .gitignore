@@ -34,3 +34,4 @@ yarn-error.log*
 
 # postgres
 volumes
+apps/strapi/public/sitemap/index.xml
