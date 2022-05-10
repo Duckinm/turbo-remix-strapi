@@ -2,6 +2,12 @@ module.exports = ({ env }) => ({
   seo: {
     enabled: true,
   },
+  menus: {
+    enabled: true,
+    config: {
+      maxDepth: 3,
+    },
+  },
   sitemap: {
     enabled: true,
     config: {

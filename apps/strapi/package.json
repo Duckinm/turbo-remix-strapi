@@ -19,6 +19,7 @@
     "@strapi/strapi": "4.1.9",
     "ioredis": "^5.0.4",
     "pg": "8.7.3",
+    "strapi-plugin-menus": "^0.3.0",
     "strapi-plugin-redis": "^1.0.0-alpha.2",
     "strapi-plugin-rest-cache": "^4.2.4",
     "strapi-plugin-sitemap": "2.0.8",
