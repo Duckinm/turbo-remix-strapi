@@ -36,7 +36,7 @@ export default function App() {
     // waiting for the loaders of the next location so we start it
     else NProgress.start();
   }, [transition.state]);
-  
+
   return (
     <html lang="en">
       <head>
@@ -44,7 +44,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-            <header>
+        <header>
           <nav>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/slow-page">Slow Page</NavLink>
