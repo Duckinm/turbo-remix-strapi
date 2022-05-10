@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import { useEffect } from "react";
 import {
   Links,
   LiveReload,
@@ -10,14 +10,19 @@ import {
   useOutlet,
   useTransition,
 } from "@remix-run/react";
+import nProgressStyles from "nprogress/nprogress.css";
 import { AnimatePresence, motion } from "framer-motion";
 import NProgress from "nprogress";
-import nProgressStyles from "nprogress/nprogress.css";
-import { useEffect } from "react";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import styles from "./styles/tailwind.css";
+import { Navbar } from "./components/sections/Navbar";
 
 export const links: LinksFunction = () => {
   // if you already have one only add this stylesheet to your list of links
-  return [{ rel: "stylesheet", href: nProgressStyles }];
+  return [
+    { rel: "stylesheet", href: nProgressStyles },
+    { rel: "stylesheet", href: styles },
+  ];
 };
 
 export const meta: MetaFunction = () => ({
@@ -45,11 +50,12 @@ export default function App() {
       </head>
       <body>
         <header>
-          <nav>
+          {/* <nav>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/slow-page">Slow Page</NavLink>
             <NavLink to="/blogs">Error</NavLink>
-          </nav>
+          </nav> */}
+          <Navbar />
         </header>
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.main
@@ -58,7 +64,7 @@ export default function App() {
             animate={{ x: "0", opacity: 1 }}
             exit={{ x: "-40%", opacity: 0 }}
           >
-            {outlet}
+            <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">{outlet}</div>
           </motion.main>
         </AnimatePresence>
         <ScrollRestoration />

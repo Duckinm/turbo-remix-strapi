@@ -8,5 +8,9 @@ export const loader: LoaderFunction = async () => {
 };
 
 export default function Screen() {
-  return <Link to="/">Home</Link>;
+  return (
+    <Link to="/" className="text-3xl font-bold underline">
+      Home
+    </Link>
+  );
 }
