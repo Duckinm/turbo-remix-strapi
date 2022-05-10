@@ -36,3 +36,5 @@ yarn-error.log*
 volumes
 apps/strapi/public/sitemap/index.xml
 apps/strapi/src/extensions/documentation/public/index.html
+apps/strapi/src/extensions/documentation/documentation/1.0.0/full_documentation.json
+apps/strapi/public/sitemap/index.xml
