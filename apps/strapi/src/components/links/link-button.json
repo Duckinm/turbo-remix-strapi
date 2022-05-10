@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_links_links",
+  "collectionName": "components_links_link_buttons",
   "info": {
-    "displayName": "Link",
-    "icon": "divide"
+    "displayName": "LinkButton",
+    "icon": "asterisk"
   },
   "options": {},
   "attributes": {
@@ -20,6 +20,12 @@
     },
     "title": {
       "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["primary", "secondary"],
+      "default": "primary",
       "required": true
     }
   }

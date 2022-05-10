@@ -1,15 +1,10 @@
 {
   "collectionName": "components_elements_richtext_selectors",
   "info": {
-    "displayName": "Richtext Selector",
-    "icon": "sliders-h"
+    "displayName": "RichtextSelector",
+    "icon": "sliders-h",
+    "description": ""
   },
   "options": {},
-  "attributes": {
-    "dynamic_richtext": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::dynamic-richtext.dynamic-richtext"
-    }
-  }
+  "attributes": {}
 }

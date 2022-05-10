@@ -26,6 +26,13 @@
       "repeatable": false,
       "component": "shared.seo",
       "required": true
+    },
+    "Components": {
+      "type": "dynamiczone",
+      "components": [
+        "links.link"
+      ],
+      "required": true
     }
   }
 }

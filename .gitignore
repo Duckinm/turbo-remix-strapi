@@ -35,3 +35,4 @@ yarn-error.log*
 # postgres
 volumes
 apps/strapi/public/sitemap/index.xml
+apps/strapi/src/extensions/documentation/public/index.html

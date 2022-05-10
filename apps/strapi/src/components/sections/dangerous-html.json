@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_dangerous_htmls",
+  "info": {
+    "displayName": "DangerousHTML",
+    "icon": "toilet"
+  },
+  "options": {},
+  "attributes": {
+    "html": {
+      "type": "text",
+      "required": true,
+      "default": "<h1>Hallo Welt</h1>"
+    }
+  }
+}

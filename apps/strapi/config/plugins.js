@@ -10,20 +10,17 @@ module.exports = ({ env }) => ({
       excludedTypes: [],
     },
   },
-  navigation: {
-    enabled: true,
-  },
+
   redis: {
     config: {
       connections: {
         default: {
           connection: {
-            host: "127.0.0.1",
-            port: 6379,
-            db: 0,
+            host: env("REDIS_host", "127.0.0.1"),
+            port: env.int("REDIS_PORT", 6379),
           },
           settings: {
-            debug: false,
+            debug: true,
           },
         },
       },
@@ -47,9 +44,6 @@ module.exports = ({ env }) => ({
           "api::global.global",
           "api::page.page",
           "api::dynamic-richtext.dynamic-richtext",
-          "plugin::navigation.navigation",
-          "plugin::navigation.navigation-item",
-          "plugin::navigation.navigations-items-related",
         ],
       },
     },

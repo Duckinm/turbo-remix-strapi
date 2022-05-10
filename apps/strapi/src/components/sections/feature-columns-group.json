@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_sections_feature_columns_groups",
+  "info": {
+    "displayName": "FeatureColumnsGroup",
+    "icon": "star-of-david"
+  },
+  "options": {},
+  "attributes": {
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-column",
+      "required": true
+    }
+  }
+}

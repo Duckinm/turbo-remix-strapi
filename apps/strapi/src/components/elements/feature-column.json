@@ -1,5 +1,5 @@
 {
-  "collectionName": "components_slices_feature_columns",
+  "collectionName": "components_feature_columns",
   "info": {
     "displayName": "FeatureColumn",
     "icon": "align-center",
