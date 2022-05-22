@@ -1,4 +1,9 @@
-import { useEffect } from "react";
+import type {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+} from "@remix-run/node";
+import { json } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -6,16 +11,28 @@ import {
   NavLink,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
   useLocation,
   useOutlet,
   useTransition,
 } from "@remix-run/react";
-import nProgressStyles from "nprogress/nprogress.css";
 import { AnimatePresence, motion } from "framer-motion";
 import NProgress from "nprogress";
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
-import styles from "./styles/tailwind.css";
+import nProgressStyles from "nprogress/nprogress.css";
+import { useEffect } from "react";
+
+import { Footer } from "./components/sections/Footer";
 import { Navbar } from "./components/sections/Navbar";
+import styles from "./styles/tailwind.css";
+import { getNavigation } from "./utils/api";
+
+type LoaderData = {};
+
+export const loader: LoaderFunction = async () => {
+  const { menu, footer } = await getNavigation();
+
+  return json({ menu, footer });
+};
 
 export const links: LinksFunction = () => {
   // if you already have one only add this stylesheet to your list of links
@@ -33,6 +50,7 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   const outlet = useOutlet();
+  const data = useLoaderData();
   const transition = useTransition();
   useEffect(() => {
     // when the state is idle then we can to complete the progress bar
@@ -55,7 +73,7 @@ export default function App() {
             <NavLink to="/slow-page">Slow Page</NavLink>
             <NavLink to="/blogs">Error</NavLink>
           </nav> */}
-          <Navbar />
+          <Navbar data={data.menu} />
         </header>
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.main
@@ -67,6 +85,7 @@ export default function App() {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">{outlet}</div>
           </motion.main>
         </AnimatePresence>
+        {/* <Footer data={data.footer} /> */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
