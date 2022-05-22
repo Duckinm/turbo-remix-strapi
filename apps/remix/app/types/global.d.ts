@@ -6,6 +6,18 @@ declare interface Menu {
     createdAt: string;
     updatedAt: string;
     sitemap_exclude: boolean;
-    items: [];
+    items: MenuItem[];
   };
+}
+
+declare interface MenuItem {
+  id: number;
+  order: number;
+  title: string;
+  url: string;
+  target: string;
+  createdAt: string;
+  updatedAt: string;
+  sitemap_exclude: boolean;
+  parent: unknown;
 }

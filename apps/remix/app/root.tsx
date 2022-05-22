@@ -26,7 +26,9 @@ import { Navbar } from "./components/sections/Navbar";
 import styles from "./styles/tailwind.css";
 import { getNavigation } from "./utils/api";
 
-type LoaderData = {};
+type LoaderData = {
+  menu: Menu[];
+};
 
 export const loader: LoaderFunction = async () => {
   const { menu, footer } = await getNavigation();
