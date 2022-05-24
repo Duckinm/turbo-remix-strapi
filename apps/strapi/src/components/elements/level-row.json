@@ -13,7 +13,14 @@
     "titleColor": {
       "type": "enumeration",
       "required": true,
-      "enum": ["orange", "green", "yellow", "blue", "red"]
+      "enum": [
+        "orange",
+        "green",
+        "yellow",
+        "blue",
+        "red"
+      ],
+      "default": "orange"
     },
     "content": {
       "type": "richtext",

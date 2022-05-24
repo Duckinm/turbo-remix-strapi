@@ -21,8 +21,6 @@ import NProgress from "nprogress";
 import nProgressStyles from "nprogress/nprogress.css";
 import { useEffect } from "react";
 
-import { Footer } from "./components/sections/Footer";
-import { Navbar } from "./components/sections/Navbar";
 import styles from "./styles/tailwind.css";
 import { getNavigation } from "./utils/api";
 
@@ -31,9 +29,7 @@ type LoaderData = {
 };
 
 export const loader: LoaderFunction = async () => {
-  const { menu, footer } = await getNavigation();
-
-  return json({ menu, footer });
+  return json({});
 };
 
 export const links: LinksFunction = () => {
@@ -75,7 +71,7 @@ export default function App() {
             <NavLink to="/slow-page">Slow Page</NavLink>
             <NavLink to="/blogs">Error</NavLink>
           </nav> */}
-          <Navbar data={data.menu} />
+          {/* <Navbar data={data.menu} /> */}
         </header>
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.main

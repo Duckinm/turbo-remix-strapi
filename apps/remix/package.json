@@ -23,16 +23,17 @@
     "nprogress": "^0.2.0",
     "qs": "^6.10.3",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.5.1",
     "@remix-run/eslint-config": "^1.5.1",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
+    "@types/react-dom": "^18.0.5",
     "autoprefixer": "^10.4.7",
-    "concurrently": "^7.2.0",
+    "concurrently": "^7.2.1",
     "config": "*",
     "eslint": "8.16.0",
     "postcss": "^8.4.14",

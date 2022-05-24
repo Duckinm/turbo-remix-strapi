@@ -1,4 +1,5 @@
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import type { Menu } from "@headlessui/react";
+import { Disclosure, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { NavLink } from "@remix-run/react";
 import { Fragment } from "react";

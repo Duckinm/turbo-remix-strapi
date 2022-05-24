@@ -1,15 +1,13 @@
 // http://localhost:1337/api/menus/footer
 
 import type { LoaderFunction } from "@remix-run/node"; // or "@remix-run/cloudflare"
-import { json } from "@remix-run/node"; // or "@remix-run/cloudflare"
-import { useLoaderData } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 
-import { Footer } from "~/components/sections/Footer";
-import { Navbar } from "~/components/sections/Navbar";
-import { getFooter, getMenu } from "~/utils/api";
+import { getAllPages } from "~/utils/api";
 
 export const loader: LoaderFunction = async () => {
-  return null;
+  const pages = await getAllPages();
+  return pages;
 };
 
 export default function Index() {
@@ -17,6 +15,14 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
+      {/* <pre>{JSON.stringify(data.data, null, 2)}</pre> */}
+      {data.data.map((page) => (
+        <div key={page.id}>
+          <Link to={`/${page.attributes.slug}`}>
+            <h2>{page.attributes.shortName}</h2>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

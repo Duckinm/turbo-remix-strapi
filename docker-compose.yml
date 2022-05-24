@@ -1,48 +1,21 @@
 version: '3.7'
 services:
-  traefik:
-    image: traefik:2.6
-    ports:
-      - '80:80'
-      - '8080:8080'
-    volumes:
-      # Docker Desktop (Windows or Mac OSX)
-      #- /var/run/docker.sock:/var/run/docker.sock
-      # Linux only
-      - /var/run/user/1000/docker.sock:/var/run/docker.sock:ro
-    command:
-      - --api=true
-      - --api.insecure=true
-      - --api.dashboard=true
-      - --providers.docker=true
-      - --providers.docker.exposedByDefault=false
-      - --entryPoints.http.address=:80
-
   postgres:
     image: postgres:13-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: strapi
       POSTGRES_PASSWORD: strapi
       POSTGRES_DB: strapi
-    volumes:
-      - ./volumes/postgres:/var/lib/postgresql/data
     ports:
       - '5132:5432'
-    labels:
-      - traefik.enable=true
 
-  redis:
-    image: bitnami/redis:6.2
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+  adminer:
+    image: adminer
+
     ports:
-      - '6379:6379'
-    labels:
-      - traefik.enable=true
+      - 8080:8080
 
-  redisinsight:
-    image: redislabs/redisinsight
-    labels:
-      - 'traefik.http.routers.redisinsight.rule=Host(`redisinsight.docker.localhost`)'
-      - 'traefik.http.routers.redisinsight.entrypoints=http'
-      - traefik.enable=true
+volumes:
+  pgdata:

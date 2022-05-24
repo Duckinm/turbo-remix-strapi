@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "predev": "docker-compose up --build -d",
+    "predev": "docker compose up --build -d",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
@@ -24,7 +24,7 @@
     "npm": ">=7.0.0",
     "node": ">=14.0.0"
   },
-  "packageManager": "yarn@1.22.18",
+  "packageManager": "yarn@1.22.17",
   "lint-staged": {
     "*.{ts,tsx,md}": "prettier --write"
   }
