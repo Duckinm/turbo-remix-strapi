@@ -1,46 +1,54 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment } from "react";
+import { StrapiFooter } from "~/types/global";
 
 import { classNames } from "~/utils/utils";
+import { CustomImage } from "./CustomImage";
 
-interface Props {}
+interface Props {
+  data: StrapiFooter;
+}
 
 export const Footer: React.FC<Props> = ({ data }) => {
   return (
-    <footer className="bg-white">
-      <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <nav
-          className="-mx-5 -my-2 flex flex-wrap justify-center"
-          aria-label="Footer"
-        >
-          {console.log(data)}
-          {/* {data.footer.map((item) => (
-            <div key={item.name} className="px-5 py-2">
-              <a
-                href={item.href}
-                className="text-base text-gray-500 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            </div>
-          ))} */}
-        </nav>
-        {/*   <div className="mt-8 flex justify-center space-x-6">
-          {navigation.social.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+    <footer className="bg-gray-100 pt-12">
+      <div className="container flex flex-col lg:flex-row lg:justify-between">
+        <div>
+          {data.logo && (
+            <>
+              {/*  <NextImage width="120" height="50" media={data.logo} /> */}
+              <CustomImage data={data.logo.data.attributes} />
+            </>
+          )}
+        </div>
+        <nav className="mx-auto mb-10 flex flex-row flex-wrap items-start px-4 sm:px-6 lg:justify-end lg:gap-20 lg:px-8">
+          {data.columns.map((footerColumn) => (
+            <div
+              key={footerColumn.id}
+              className="mt-10 w-6/12 lg:mt-0 lg:w-auto"
             >
-              <span className="sr-only">{item.name}</span>
-              <item.icon className="h-6 w-6" aria-hidden="true" />
-            </a>
+              <p className="font-semibold uppercase tracking-wide">
+                {footerColumn.title}
+              </p>
+              <ul className="mt-2">
+                {footerColumn.links.map((link) => (
+                  <li
+                    key={link.id}
+                    className="-mx-1 py-1 px-1 text-gray-700 hover:text-gray-900"
+                  >
+                    {/*  <CustomLink link={link}>{link.text}</CustomLink> */}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </div> */}
-        <p className="mt-8 text-center text-base text-gray-400">
-          &copy; {new Date().getFullYear()} Workflow, Inc. All rights reserved.
-        </p>
+        </nav>
+      </div>
+      <div className="bg-gray-200 py-6 text-center text-sm text-gray-700">
+        <div className="container">
+          {new Date().getFullYear()} {data.smallText}
+        </div>
       </div>
     </footer>
   );

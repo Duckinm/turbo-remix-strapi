@@ -47,19 +47,38 @@ export async function fetchAPI(
   return data;
 }
 
-export async function getNavigation() {
-  const menu: Menu = await fetchAPI("/menus/menu");
-  const footer = await fetchAPI("/menus/footer");
-  return { menu, footer };
-}
-
 export async function getAllPages() {
-  const pages = await fetchAPI("/pages?populate=true");
+  const res = await fetchAPI("/pages", { populate: "*" });
+  const pages = res.data;
   return pages;
 }
 
 export async function getSinglePage(slug: string) {
   const page = await fetchAPI("/pages?filters[slug][$eq]=" + slug);
 
-  return page;
+  return page[0];
+}
+
+export async function getGlobals() {
+  const res = await fetchAPI("/global", {
+    populate: {
+      navbar: {
+        populate: "*",
+      },
+      footer: {
+        populate: "*",
+        columns: {
+          populate: "*",
+        },
+      },
+    },
+  });
+  const globals = res.data;
+  return globals;
+}
+
+export async function getGlobalsDeep() {
+  const res = await fetchAPI("/global?populate=deep");
+  const globals = res.data;
+  return globals;
 }

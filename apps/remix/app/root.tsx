@@ -22,15 +22,6 @@ import nProgressStyles from "nprogress/nprogress.css";
 import { useEffect } from "react";
 
 import styles from "./styles/tailwind.css";
-import { getNavigation } from "./utils/api";
-
-type LoaderData = {
-  menu: Menu[];
-};
-
-export const loader: LoaderFunction = async () => {
-  return json({});
-};
 
 export const links: LinksFunction = () => {
   // if you already have one only add this stylesheet to your list of links
@@ -65,14 +56,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <header>
-          {/* <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/slow-page">Slow Page</NavLink>
-            <NavLink to="/blogs">Error</NavLink>
-          </nav> */}
-          {/* <Navbar data={data.menu} /> */}
-        </header>
         <AnimatePresence exitBeforeEnter initial={false}>
           <motion.main
             key={useLocation().key}
@@ -83,7 +66,6 @@ export default function App() {
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">{outlet}</div>
           </motion.main>
         </AnimatePresence>
-        {/* <Footer data={data.footer} /> */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

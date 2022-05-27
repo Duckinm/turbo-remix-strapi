@@ -2,29 +2,12 @@ module.exports = ({ env }) => ({
   seo: {
     enabled: true,
   },
-  menus: {
-    enabled: true,
+  upload: {
     config: {
-      maxDepth: 3,
-    },
-  },
-  sitemap: {
-    enabled: true,
-    config: {
-      autoGenerate: true,
-      allowedFields: ["id", "uid"],
-      excludedTypes: [],
-    },
-  },
-  graphql: {
-    config: {
-      endpoint: "/graphql",
-      shadowCRUD: true,
-      playgroundAlways: false,
-      depthLimit: 15,
-      amountLimit: 100,
-      apolloServer: {
-        tracing: true,
+      provider: "strapi-provider-upload-cloudflare",
+      providerOptions: {
+        accountId: env("STRAPI_UPLOAD_CLOUDFLARE_ACCOUNT_ID"),
+        apiKey: env("STRAPI_UPLOAD_CLOUDFLARE_API_KEY"),
       },
     },
   },
