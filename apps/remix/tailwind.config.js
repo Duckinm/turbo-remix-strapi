@@ -3,5 +3,14 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  variants: {
+    aspectRatio: ['responsive', 'hover'],
+  },
+  corePlugins: {
+    aspectRatio: false,
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

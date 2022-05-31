@@ -13,7 +13,7 @@
     "lint": "eslint --fix ."
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.3",
+    "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "@next-boost/hybrid-disk-cache": "^0.3.0",
     "@remix-run/node": "^1.5.1",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@remix-run/dev": "^1.5.1",
     "@remix-run/eslint-config": "^1.5.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/typography": "^0.5.2",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.9",

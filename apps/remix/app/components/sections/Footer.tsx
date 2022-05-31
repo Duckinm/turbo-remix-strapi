@@ -1,9 +1,10 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Fragment } from "react";
-import { StrapiFooter } from "~/types/global";
 
+import type { StrapiFooter } from "~/types/global";
 import { classNames } from "~/utils/utils";
+
 import { CustomImage } from "./CustomImage";
 
 interface Props {
